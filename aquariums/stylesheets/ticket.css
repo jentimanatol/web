@@ -1,0 +1,86 @@
+/* General page styles for readability */
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form container */
+.application-form-container {
+    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+    /* max-width: 750px;  */
+    /* width: 75%;  */
+    /* instead of max-width */
+    /* margin: 2rem LEFT; */
+     margin: 6rem 0 2rem 7rem; 
+     
+    /* top, right, bottom, left — pushes it from the left margin */ 
+    /* padding: 3rem; */
+    /* border-radius: 15px; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Form title */
+.application-form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields and selects */
+.application-form-container input,
+.application-form-container select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff; /* solid white background */
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Labels */
+.application-form-container label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    display: block;
+    color: #333;
+}
+
+/* Buttons */
+.submit-button,
+.reset-button {
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem 0.5rem 0 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.submit-button {
+    background-color: #28a745;
+}
+
+.reset-button {
+    background-color: #dc3545;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.reset-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Images on the right-side */
+.right-side img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 10px;
+}

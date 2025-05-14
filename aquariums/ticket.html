@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/ticket.css">
+
+    <title>BUY TICKETS</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="content.html">Aquariums to be Seen</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="ticket.html">BUY TICKETS</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="application-form-container">
+
+            <h2>Purchase Tickets</h2>
+            <form action="#" method="post">
+
+                <!-- 1. Aquarium Selection -->
+                <label for="aquarium">Choose Aquarium:</label>
+                <select id="aquarium" name="aquarium" required>
+                    <option value="" disabled selected>Select an aquarium</option>
+                    <option value="neaq">New England Aquarium</option>
+                    <option value="mystic">Mystic Aquarium</option>
+                    <option value="maritime">The Maritime Aquarium</option>
+                    <option value="seacoast">Seacoast Science Center</option>
+                    <option value="maine">Maine State Aquarium</option>
+                </select>
+                <p style="margin-bottom: 1rem;">
+                    Or visit:
+                    <a href="https://www.neaq.org/" target="_blank">New England</a> |
+                    <a href="https://www.mysticaquarium.org/" target="_blank">Mystic</a> |
+                    <a href="https://www.maritimeaquarium.org/" target="_blank">Maritime</a> |
+                    <a href="https://www.seacoastsciencecenter.org/" target="_blank">Seacoast</a> |
+                    <a href="https://www.maine.gov/dmr/programs/education-division/maine-state-aquarium" target="_blank">Maine</a>
+                </p>
+
+                <!-- 2. Visit Info -->
+                <label for="visit-date">Visit Date:</label>
+                <input type="date" id="visit-date" name="visit-date" required>
+
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="" disabled selected>Select ticket type</option>
+                    <option value="adult">Adult</option>
+                    <option value="mature">Mature</option>
+                </select>
+
+                <!-- 3. Personal Info -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+                <label for="second-name">Second Name:</label>
+                <input type="text" id="second-name" name="second-name" placeholder="Enter your second name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+                <!-- 4. Card Option -->
+                <label for="card-option">Card Option:</label>
+                <select id="card-option" name="card-option" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="add">Add New Credit Card</option>
+                    <option value="apply">Apply for a Credit Card</option>
+                    <option value="existing1">Visa ending in 0515</option>
+                    <option value="existing2">American Express ending 2548</option>
+                </select>
+
+                <!-- Conditional New Credit Card Fields -->
+                <div id="new-card-fields" style="display: none; margin-top: 1rem;">
+                    <label for="card-name">Name on the Card:</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Enter the name on the card" required>
+
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+
+                    <label for="expiration-date">Expiration Date:</label>
+                    <input type="month" id="expiration-date" name="expiration-date" required>
+
+                    <label for="pin-code">PIN Code:</label>
+                    <input type="password" id="pin-code" name="pin-code" placeholder="Enter your PIN code" required>
+                </div>
+
+                <!-- Conditional Credit Card Application Fields -->
+                <div id="card-application-fields" style="display: none; margin-top: 1rem;">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="income">Annual Income:</label>
+                    <input type="number" id="income" name="income" placeholder="Enter your annual income" required>
+
+                    <label for="employment-status">Employment Status:</label>
+                    <select id="employment-status" name="employment-status" required>
+                        <option value="" disabled selected>Select your status</option>
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="student">Student</option>
+                        <option value="retired">Retired</option>
+                    </select>
+
+                    <label for="card-type">Select Type of Credit Card:</label>
+                    <select id="card-type" name="card-type" required>
+                        <option value="" disabled selected>Select a card type</option>
+                        <option value="standard">Standard</option>
+                        <option value="gold">Gold</option>
+                        <option value="platinum">Platinum</option>
+                        <option value="business">Business</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <!-- 5. Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="submit-button">Submit</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <aside class="right-side img">
+            <img src="images/Dolphin.jpg" alt="Dolphin">
+            <img src="images/harbor-seal-among-rocks.jpg" alt="Seal">
+            <img src="images/exhibit-gulf-of-maine-lobster-trap-1024x768.jpg" alt="Lobster">
+            <img src="images/two-green-crabs-in-a-tank-invasive-species-1024x768.jpg" alt="crab">
+            <img src="images/pasted_mceclip08.jpg" alt="turtle">
+        </aside>
+
+    </main>
+
+    <footer>
+        <h5>Anatolie</h5>
+        &copy; 2025
+    </footer>
+
+    <!-- JavaScript to toggle extra fields -->
+    <script>
+        document.getElementById("card-option").addEventListener("change", function () {
+            const newCardFields = document.getElementById("new-card-fields");
+            const cardApplicationFields = document.getElementById("card-application-fields");
+            
+            // Reset the display of both fields first
+            newCardFields.style.display = "none";
+            cardApplicationFields.style.display = "none";
+            
+            if (this.value === "add") {
+                newCardFields.style.display = "block"; // Show the new credit card fields
+            } 
+            else if (this.value === "apply") {
+                cardApplicationFields.style.display = "block"; // Show the credit card application fields
+            } 
+            else if (this.value === "existing1" || this.value === "existing2") {
+                // No extra fields to show for existing cards
+                newCardFields.style.display = "none";
+                cardApplicationFields.style.display = "none";
+            }
+            else {
+                // Hide all fields if no valid option is selected
+                newCardFields.style.display = "none";
+                cardApplicationFields.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
