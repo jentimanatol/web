@@ -1,0 +1,171 @@
+/* Background style */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/soft_gradient_background.jpg); /* New background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    margin: 20px;
+}
+
+/* Header style */
+header {
+    text-align: center;
+    background-color: #2E8B57; /* Softer green */
+    color: white;
+    padding: 20px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border: 2px solid #2E8B57; /* Same green as background */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    position: relative;
+    max-width: 800px;  /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin: 0 auto; /* Center the title horizontally */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.title-container {
+    max-width: 800px; /* Match the max-width of the container */
+    margin: 0 auto; /* Center the title horizontally */
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Logo style */
+.logo {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+/* Container style */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #2E8B57; /* Same green as background */
+    overflow: auto; /* Enables scrolling */
+    position: relative;
+}
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2E8B57; /* Softer green */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Link style */
+a {
+    color: #2E8B57; /* Softer green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Image style */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Inner div style */
+#divA {
+    position: relative;
+}
+
+#divB {
+    height: 500px; /* Adjust as needed */
+    overflow: auto; /* Enables scrolling */
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+    /* background-color: #111; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.5); */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #00ffd9;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffa500;
+}
