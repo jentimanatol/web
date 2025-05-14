@@ -1,0 +1,141 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Sigmar&display=swap');
+
+/* Navbar Styling */
+.navbar {
+    background-color: #004080;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    padding: 120px 20px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* Grid Panels */
+.grid-panel {
+    background: #004080;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Panel Placement */
+.state-house {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.demographics {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.symbols {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.attractions {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+
+/* Image Styling */
+.grid-panel img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.symbols img {
+    object-fit: contain;
+    max-height: 200px;
+}
+
+/* Typography */
+.grid-panel h2, .grid-panel h3 {
+    font-family: 'Sigmar', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Demographics List */
+.demographics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Attractions Grid */
+.attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.attraction-item {
+    position: relative;
+}
+
+.attraction-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
+
+.attraction-item p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .state-house,
+    .demographics,
+    .symbols,
+    .attractions {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+}
