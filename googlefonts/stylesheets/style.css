@@ -1,0 +1,209 @@
+/* import Google standart text stile */
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Playwrite+IT+Moderna:wght@100..400&family=Sigmar&display=swap');
+
+
+
+/* Background style 
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/soft_gradient_background.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    margin: 20px;
+}*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+.navbar {
+    background-color: #b30000; /* Red Background */
+    padding: 15px 20px;
+    text-align: center;
+}
+.navbar a {
+    color: white; /* White Text */
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: white;
+    color: #b30000; /* Red text on hover */
+    border-radius: 5px;
+}
+
+
+
+
+/* Header style */
+header {
+    text-align: center;
+    background-color:#b30000; /* Red text on hover */
+    color: white;
+    padding: 20px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border: 2px solid #b30000; /* Red text on hover */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    position: relative;
+    max-width: 800px;  /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin: 0 auto; /* Center the title horizontally */
+}
+
+
+/* Container style */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #b30000; /* Red text on hover */
+    overflow: auto; /* Enables scrolling */
+    position: relative;
+
+}
+
+.title-container {
+    max-width: 800px; /* Match the max-width of the container */
+    margin: 0 auto; /* Center the title horizontally */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #2E8B57; /* Same green as background */
+    overflow: auto; /* Enables scrolling */
+    position: relative;
+    margin-top: 20px;
+
+}
+
+h1 {
+    margin: 0;
+    /*font-size: 24px;*/
+    font-size:  5vmax ; 
+}
+
+/* Logo style */
+.logo {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+
+.paragraph {
+    margin: 20px 0;
+}
+
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2E8B57; /* Softer green */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Link style */
+a {
+    color: #2E8B57; /* Softer green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Image style */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Inner div style */
+#divA {
+    position: relative;
+}
+
+#divB {
+    min-height: 200px; /* Ensures a minimum height */
+    overflow: auto; /* Enables scrolling */
+     
+
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.grechen-fuemen-regular {
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sigmar-regular {
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+    .playwrite-it-moderna-100 {
+        font-family: "Playwrite IT Moderna", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    /*
+
+// <weight>: Use a value from 100 to 400
+// <uniquifier>: Use a unique and descriptive class name
+
+.playwrite-it-moderna-<uniquifier> {
+  font-family: "Playwrite IT Moderna", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
