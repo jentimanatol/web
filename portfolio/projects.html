@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Portfolio</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    
+    <main>
+<section class="projects">
+    <h2>🌟 My Projects</h2>
+    <p>Welcome to my portfolio! Here are some of the projects I've worked on, showcasing my skills and interests in software development.</p>
+    
+    <table class="projects-table">
+        <thead>
+            <tr>
+                <th>📌 Project</th>
+                <th>📝 Description</th>
+                <th>🛠️ Tech Stack</th>
+                <th>📅 Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/RegressionLineEquation" target="_blank">RegressionLineEquation</a></td>
+                <td>Calculates and visualizes regression lines for data analysis.</td>
+                <td>Python</td>
+                <td>May 5, 2025</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/LinearCorrelationCoefficientVisualizerApp" target="_blank">LinearCorrelationCoefficientVisualizerApp</a></td>
+                <td>Visual tool for understanding linear correlation coefficients.</td>
+                <td>Python</td>
+                <td>May 5, 2025</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/CriticalRValueApp" target="_blank">CriticalRValueApp</a></td>
+                <td>Visualizes critical Pearson r-values based on significance levels and sample sizes.</td>
+                <td>Python</td>
+                <td>May 5, 2025</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/AutoTyper" target="_blank">AutoTyper</a></td>
+                <td>Automates typing of frequently used code snippets in IDEs.</td>
+                <td>Python</td>
+                <td>May 5, 2025</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/BambooCO2Offset" target="_blank">BambooCO2Offset</a></td>
+                <td>Interactive tool for visualizing CO₂ offset by bamboo plantations.</td>
+                <td>Python</td>
+                <td>May 5, 2025</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/pyplot" target="_blank">pyplot</a></td>
+                <td>Graph visualization using Python's plotting libraries.</td>
+                <td>Python</td>
+                <td>May 1, 2025</td>
+            </tr>
+
+            <tr>
+                <td><a href="https://github.com/jentimanatol/QT" target="_blank">Qt Widgets Application</a></td>
+                <td>Projects demonstrating GUI development using Qt framework in C++.</td>
+                <td>C++</td>
+                <td>Mar 12, 2025</td>
+            </tr>
+            <tr>
+                <td><a href="https://github.com/jentimanatol/php_sql" target="_blank">MySQL and PHP Integration</a></td>
+                <td>Projects focusing on building and managing relational databases with PHP and MySQL.</td>
+                <td>PHP, SQL</td>
+                <td>Mar 12, 2025</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h3>🎯 Featured Project: BambooCO2Offset</h3>
+    <div class="featured-project">
+        {% load static %}
+        <img src="{% static 'portfolio/images/bamboo_co2_offset.png' %}" alt="Bamboo CO2 Offset Project" class="project-image">
+        <h4>BambooCO2Offset</h4>
+        <p>This interactive application allows users to input or modify country names, land areas, and annual CO₂ emissions. It dynamically generates a bar chart comparing actual land areas with the required bamboo plantation areas to offset CO₂ emissions.</p>
+
+        <h4>🔍 Key Features</h4>
+        <ul class="features-list">
+            <li>Interactive data input for customized analysis</li>
+            <li>Dynamic visualization of CO₂ offset requirements</li>
+            <li>Educational tool for understanding environmental impact</li>
+        </ul>
+    </div>
+
+    <hr>
+    <div class="github-link">
+        <p>🔗 Explore more of my work on <a href="https://github.com/jentimanatol?tab=repositories" target="_blank">GitHub</a>.</p>
+    </div>
+</section>
+  </main>
+
+
+    <footer>
+        <h5>Anatolie </h5>
+        &copy; 2025
+    </footer>
+
+</body>
+
+</html>

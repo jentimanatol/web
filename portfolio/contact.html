@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Contact | Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>📬 Contact Me</h2>
+            <p>I’m always open to new opportunities, collaborations, or just a friendly chat. Reach out using any method below.</p>
+
+            <div class="contact-info card">
+                <h3>📞 Get in Touch</h3>
+                <table class="contact-table">
+                    <tr>
+                        <th>Method</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>jentimi@bhcc.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>+1 (781) 600-7000</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>Boston, MA</td>
+                    </tr>
+                    <tr>
+                        <td>Database (fake)</td>
+                        <td>Localhost:3306 / portfolio_db (readonly)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="social-media card">
+                <h3>🌐 Connect With Me</h3>
+                <ul class="social-links">
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/anatolie-jentimir-719600175/" target="_blank">/in/anatolie-jentimir</a></li>
+                    <li>GitHub: <a href="https://github.com/jentimanatol" target="_blank">github.com/jentimanatol</a></li>
+                </ul>
+            </div>
+
+            <!-- Django Template Logic Placeholder -->
+            <!-- {% if messages %} -->
+            <div class="messages">
+                <!-- {% for message in messages %} -->
+                <div class="alert success">Message sent successfully!</div>
+                <!-- {% endfor %} -->
+            </div>
+            <!-- {% endif %} -->
+
+            <div class="contact-form card">
+                <h3>✉️ Send Me a Message</h3>
+                <form method="POST" action="#">
+                    <!-- {% csrf_token %} -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- {% load static %} -->
+            <img src="images/contact.jpg" alt="Contact Illustration" class="project-image">
+        </section>
+    </main>
+
+    <footer>
+        <h5>Anatolie</h5>
+        &copy; 2025
+    </footer>
+
+</body>
+
+</html>
