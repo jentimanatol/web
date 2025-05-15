@@ -6,7 +6,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+/* body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
   color: #333;
@@ -15,7 +15,31 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+} */
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+  color: #333;
+
+  /* Remove flex centering */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* height: 100vh; */
+
+  /* add padding on top for header height */
+  padding-top: 70px; /* adjust to your header height */
+  margin: 0 20px;
 }
+
+
+
+
+
+
 
 /* Header styles */
 .site-header {
