@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login | Bargain & Buy</title>
+
+
+
+      <header class="site-header">
+        <div class="logo-title">
+            <!-- <img src="images/bargain_logo.png" alt="Bargain & Buy Logo" class="logo"> -->
+              <img src="images/bhcc_logo.png" alt="Logo" class="logo">
+            <h1>Bargain & Buy</h1>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+
+
+
+
   <style>
     * {
       box-sizing: border-box;
     }
 
     body {
+      
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
       margin: 0;
@@ -124,7 +148,17 @@
       }
     }
   </style>
+
+
+
+
+
   <script>
+
+
+
+
+
     function showQuery(event) {
       event.preventDefault(); // Prevent form from submitting
       const email = document.forms["loginForm"]["username"].value;
