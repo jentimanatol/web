@@ -1,61 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bargain & Buy - Home</title>
-    <link rel="stylesheet" href="stylesheets/style.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain & Buy</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
+
 <body>
-
-<header class="header">
-    <h1>Bargain & Buy</h1>
-    <p>Your educational platform for mastering database queries</p>
-</header>
-
-<main class="menu">
-    <section class="welcome-section" aria-label="Welcome Section">
-        <h2>👋 Welcome to Bargain & Buy</h2>
-        <p>
-            Dive into a hands-on learning experience with SQL queries, procedures, and database management.
-            Navigate through the menu to explore practical examples and test your knowledge interactively.
-        </p>
-        <div class="nav-grid" role="navigation" aria-label="Main Navigation">
-            <article class="nav-card" tabindex="0" role="button" aria-pressed="false" onclick="location.href='login.html'">
-                <h3>Login</h3>
-                <p>Access your account and see how SQL queries authenticate users behind the scenes.</p>
-                <button type="button" onclick="location.href='login.html'; event.stopPropagation();">Go to Login</button>
-            </article>
-
-            <article class="nav-card" tabindex="0" role="button" aria-pressed="false" onclick="location.href='menu.html'">
-                <h3>Menu</h3>
-                <p>Explore categorized SQL queries and procedures, with explanations and interactive previews.</p>
-                <button type="button" onclick="location.href='menu.html'; event.stopPropagation();">Explore Menu</button>
-            </article>
-
-            <article class="nav-card" tabindex="0" role="button" aria-pressed="false" onclick="alertEducationalTip()">
-                <h3>Learn More</h3>
-                <p>Get tips on writing efficient SQL and understanding database structure directly from our educational guide.</p>
-                <button type="button" onclick="alertEducationalTip(); event.stopPropagation();">Show Tip</button>
-            </article>
+    <header class="site-header">
+        <div class="logo-title">
+            <img src="images/bargain_logo.png" alt="Bargain & Buy Logo" class="logo">
+            <h1>Bargain & Buy</h1>
         </div>
-    </section>
-</main>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<script>
-    function alertEducationalTip() {
-        alert(
-`💡 SQL Educational Tip:
+    <main class="homepage-main">
+        <section class="welcome-section">
+            <h2>Welcome to Bargain & Buy</h2>
+            <p>Your one-stop shop for exclusive deals and unbeatable prices!</p>
+            <a href="menu.html" class="cta-button">Explore Deals</a>
+        </section>
 
-Use parameterized queries to prevent SQL injection attacks.
-Always validate user input both client-side and server-side.
+        <section class="features">
+            <div class="feature-card">
+                <h3>🛍️ Great Discounts</h3>
+                <p>Enjoy the latest deals every day. Never pay full price again!</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚚 Fast Delivery</h3>
+                <p>Get your products delivered quickly and safely to your door.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Secure Login</h3>
+                <p>Your account is protected with modern encryption and security practices.</p>
+            </div>
+        </section>
+    </main>
 
-Example:
-SELECT * FROM Users WHERE Email = ? AND Password = ?;`
-        );
-    }
-</script>
-
+    <footer class="site-footer">
+        <p>&copy; 2025 Bargain & Buy. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
