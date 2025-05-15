@@ -19,7 +19,7 @@ body {
 
 /* Header styles */
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -31,17 +31,6 @@ body {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-
-
-
-
-
-
-  position: fixed;
-  top: 10px;
-  left: 0;
-  width: 100%;
-
   z-index: 1000; /* ensures it stays above other content */
 
  
@@ -49,7 +38,7 @@ body {
 
 
 
-
+  
 }
 
 .logo-title {
