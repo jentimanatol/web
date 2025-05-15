@@ -1,90 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bargain and Buy - Full Menu</title>
-  <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bargain & Buy - Home</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+
 </head>
 <body>
 
-  <header class="header">
-    <h1>Bargain and Buy</h1>
-    <p>Welcome back, Guest</p>
-  </header>
+<header class="header">
+    <h1>Bargain & Buy</h1>
+    <p>Your educational platform for mastering database queries</p>
+</header>
 
-  <main class="menu">
-    <h2>Main Menu</h2>
-    <div class="group-container">
+<main class="menu">
+    <section class="welcome-section" aria-label="Welcome Section">
+        <h2>👋 Welcome to Bargain & Buy</h2>
+        <p>
+            Dive into a hands-on learning experience with SQL queries, procedures, and database management.
+            Navigate through the menu to explore practical examples and test your knowledge interactively.
+        </p>
+        <div class="nav-grid" role="navigation" aria-label="Main Navigation">
+            <article class="nav-card" tabindex="0" role="button" aria-pressed="false" onclick="location.href='login.html'">
+                <h3>Login</h3>
+                <p>Access your account and see how SQL queries authenticate users behind the scenes.</p>
+                <button type="button" onclick="location.href='login.html'; event.stopPropagation();">Go to Login</button>
+            </article>
 
-      <!-- CREATE FUNCTION -->
-      <section class="group">
-        <h3>CREATE FUNCTION</h3>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE FUNCTION countCustomersByYear(year INT)\nRETURNS INT\nREADS SQL DATA\nBEGIN\n  DECLARE total INT;\n  SELECT COUNT(*) INTO total\n  FROM Customers\n  WHERE YEAR(CreateDate) = year;\n  RETURN total;\nEND //\nDELIMITER ;`);">Count Customers By Year</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE FUNCTION countOrdersByCustomerAndProduct(cid INT, pid INT)\nRETURNS INT\nREADS SQL DATA\nBEGIN\n  DECLARE total INT;\n  SELECT COUNT(*) INTO total\n  FROM Orders\n  WHERE CustomerID = cid AND ProductID = pid;\n  RETURN total;\nEND //\nDELIMITER ;`);">Count Orders By Customer And Product</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE FUNCTION getCustomerOrderCount(cid INT)\nRETURNS INT\nREADS SQL DATA\nBEGIN\n  DECLARE order_count INT;\n  SELECT COUNT(*) INTO order_count\n  FROM Orders\n  WHERE CustomerID = cid;\n  RETURN order_count;\nEND //\nDELIMITER ;`);">Get Customer Order Count</button>
-        </div>
-      </section>
+            <article class="nav-card" tabindex="0" role="button" aria-pressed="false" onclick="location.href='menu.html'">
+                <h3>Menu</h3>
+                <p>Explore categorized SQL queries and procedures, with explanations and interactive previews.</p>
+                <button type="button" onclick="location.href='menu.html'; event.stopPropagation();">Explore Menu</button>
+            </article>
 
-      <!-- CREATE PROCEDURE -->
-      <section class="group">
-        <h3>CREATE PROCEDURE</h3>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE PROCEDURE showTodayOrdersCount()\nBEGIN\n  SELECT COUNT(*) AS TodayOrders\n  FROM Orders\n  WHERE DATE(OrderDate) = CURDATE();\nEND //\nDELIMITER ;`);">Show Count Today Orders</button>
+            <article class="nav-card" tabindex="0" role="button" aria-pressed="false" onclick="alertEducationalTip()">
+                <h3>Learn More</h3>
+                <p>Get tips on writing efficient SQL and understanding database structure directly from our educational guide.</p>
+                <button type="button" onclick="alertEducationalTip(); event.stopPropagation();">Show Tip</button>
+            </article>
         </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE PROCEDURE totalSalesByCustomer(IN cid INT)\nBEGIN\n  SELECT SUM(Price * Quantity) AS TotalSales\n  FROM OrderDetails\n  WHERE CustomerID = cid;\nEND //\nDELIMITER ;`);">Get Total Sales By Customer</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE PROCEDURE getRandomLastName()\nBEGIN\n  SELECT LastName\n  FROM Customers\n  ORDER BY RAND()\n  LIMIT 1;\nEND //\nDELIMITER ;`);">Get Random Last Name</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE PROCEDURE getRandomLastNameDetail()\nBEGIN\n  SELECT *\n  FROM Customers\n  ORDER BY RAND()\n  LIMIT 1;\nEND //\nDELIMITER ;`);">Get Random Last Name Detail</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELIMITER //\nCREATE PROCEDURE getEmployeeLastNamesByPattern(IN pattern VARCHAR(255))\nBEGIN\n  SELECT LastName\n  FROM Employees\n  WHERE LastName LIKE pattern;\nEND //\nDELIMITER ;`);">Get Employee Last Names By Pattern</button>
-        </div>
-      </section>
+    </section>
+</main>
 
-      <!-- Regular Queries -->
-      <section class="group">
-        <h3>Regular Queries</h3>
-        <div class="option">
-          <button onclick="alert(`Query used:\nINSERT INTO Customers (FirstName, LastName, Email)\nVALUES ('John', 'Doe', 'john@example.com');`);">Insert New Customer</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nDELETE FROM Customers WHERE CustomerID = ?;`);">Delete Customer by ID</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT * FROM Orders\nWHERE CustomerID = ?;`);">Search Order History</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT Orders.OrderID, Customers.LastName, Products.ProductName, OrderDetails.Quantity\nFROM Orders\nJOIN Customers ON Orders.CustomerID = Customers.CustomerID\nJOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID\nJOIN Products ON OrderDetails.ProductID = Products.ProductID\nJOIN Employees ON Orders.EmployeeID = Employees.EmployeeID;`);">Search Orders Details Join 5 Tables</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT * FROM Orders\nJOIN Customers ON Orders.CustomerID = Customers.CustomerID\nWHERE Customers.LastName LIKE '%Smith%';`);">Search Orders By Customer LastName</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT * FROM Products WHERE Available = 1;`);">Show Available Products</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT Email FROM Customers;`);">Show All Emails</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT * FROM Customers;`);">Show All Customers</button>
-        </div>
-        <div class="option">
-          <button onclick="alert(`Query used:\nSELECT COUNT(*) FROM Orders WHERE OrderDate = '2025-01-01';`);">Show Count Select Date Orders</button>
-        </div>
-      </section>
+<script>
+    function alertEducationalTip() {
+        alert(
+`💡 SQL Educational Tip:
 
-    </div>
-  </main>
+Use parameterized queries to prevent SQL injection attacks.
+Always validate user input both client-side and server-side.
+
+Example:
+SELECT * FROM Users WHERE Email = ? AND Password = ?;`
+        );
+    }
+</script>
 
 </body>
 </html>
