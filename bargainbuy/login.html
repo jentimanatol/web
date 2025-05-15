@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | Bargain & Buy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .imgcontainer h1 {
+      margin-bottom: 10px;
+      font-size: 26px;
+      color: #009688;
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      border-color: #009688;
+      outline: none;
+    }
+
+    button {
+      background-color: #009688;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00796b;
+    }
+
+    .cancelbtn {
+      background-color: #f44336;
+      margin-top: 10px;
+    }
+
+    .cancelbtn:hover {
+      background-color: #d32f2f;
+    }
+
+    .container {
+      padding: 10px 0;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .checkbox-label input {
+      margin-right: 10px;
+    }
+
+    .psw {
+      text-align: right;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .psw a {
+      color: #009688;
+      text-decoration: none;
+    }
+
+    .psw a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 480px) {
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="login.php" method="post">
+    <div class="imgcontainer">
+      <h1>Bargain & Buy</h1>
+    </div>
+
+    <div class="container">
+      <label for="username">Email</label>
+      <input type="text" placeholder="Enter Email" name="username" required>
+
+      <label for="psw">Password</label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+
+      <div class="checkbox-label">
+        <input type="checkbox" checked="checked" name="remember">
+        <label for="remember">Remember me</label>
+      </div>
+    </div>
+
+    <div class="container">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <div class="psw">Forgot <a href="#">password?</a></div>
+    </div>
+  </form>
+
+</body>
+</html>
