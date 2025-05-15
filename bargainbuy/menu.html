@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain and Buy - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .menu {
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 1200px;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        .menu h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .group-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .group {
+            flex: 1 1 30%;
+            background-color: #f9f9f9;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .group h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .option {
+            margin-bottom: 10px;
+        }
+        .option button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 90%;
+            max-width: 250px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .option button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .group {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Bargain and Buy</h1>
+        <h3>Welcome back, Guest</h3>
+    </div>
+
+    <div class="menu">
+        <h2>Main Menu</h2>
+        <div class="group-container">
+
+            <div class="group">
+                <h3>CREATE FUNCTION</h3>
+                <div class="option"><button onclick="alert('Count Customers By Year')">Show Count Customers By Year</button></div>
+                <div class="option"><button onclick="alert('Count Orders By Customer And Product')">Count Orders By Customer And Product</button></div>
+                <div class="option"><button onclick="alert('Get Customer Order Count')">Get Customer Order Count</button></div>
+            </div>
+
+            <div class="group">
+                <h3>CREATE PROCEDURE</h3>
+                <div class="option"><button onclick="alert('Show Today Orders Count')">Show Count Today Orders</button></div>
+                <div class="option"><button onclick="alert('Total Sales By Customer')">Get Total Sales By Customer</button></div>
+                <div class="option"><button onclick="alert('Random Last Name')">Get Random Last Name</button></div>
+                <div class="option"><button onclick="alert('Random Last Name Detail')">Get Random Last Name Detail</button></div>
+                <div class="option"><button onclick="alert('Employee Last Names By Pattern')">Get Employee Last Names By Pattern</button></div>
+            </div>
+
+            <div class="group">
+                <h3>Regular Queries</h3>
+                <div class="option"><button onclick="alert('Insert New Customer')">Insert New Customer</button></div>
+                <div class="option"><button onclick="alert('Delete Customer by ID')">Delete Customer by ID</button></div>
+                <div class="option"><button onclick="alert('Search Order History')">Search Order History</button></div>
+                <div class="option"><button onclick="alert('Search Orders Details Join 5 Tables')">Search Orders Details</button></div>
+                <div class="option"><button onclick="alert('Search Orders By Last Name')">Search Orders By Customer LastName</button></div>
+                <div class="option"><button onclick="alert('Show Products')">Show Available Products</button></div>
+                <div class="option"><button onclick="alert('Show All Emails')">Show All Emails</button></div>
+                <div class="option"><button onclick="alert('Show Customers')">Show All Customers</button></div>
+                <div class="option"><button onclick="alert('Show Orders by Date')">Show Count Select Date Orders</button></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
