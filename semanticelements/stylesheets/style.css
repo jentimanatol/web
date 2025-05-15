@@ -1,0 +1,227 @@
+
+/* import Google standart text stile */
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Playwrite+IT+Moderna:wght@100..400&family=Sigmar&display=swap');
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+   /* background-image: url(../images/soft_gradient_background.jpg); */
+    background-color: #f9f9f9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 10px; 
+  
+}
+
+
+/* Header style */
+header {
+    text-align: center;
+    background-color: #b30000;
+    color: white;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border: 2px solid black; ; /* Red text on hover */
+    
+    position: relative;
+   
+    height: 45px; /* Adjust height as needed */
+    margin: 10px 10px; 
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Nav style */
+nav {
+    background-color: #b30000;
+    border: black; ;
+    background:  #b30000;
+    padding: 20px;
+    border-radius: 10px;
+   
+    text-align: center;
+    border: 2px solid black;  
+    height: 50px; /* Adjust height as needed */
+   /* margin: 0 auto; /* Center the title horizontally */
+   
+    margin: 10px 10px; 
+    position: float;
+    top: 0;
+    /*width: calc(100% - 44px);*/
+    z-index: 1000;
+}
+
+
+.navbar {
+    background-color: #b30000; /* Red Background */
+    padding: 15px 20px;
+    text-align: center;
+}
+.navbar a {
+    color: white; /* White Text */
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+.navbar a:hover {
+    background-color: white;
+    color: #b30000; /* Red text on hover */
+    border-radius: 5px;
+}
+
+
+/* section style */
+
+section {
+    background-color: #b30000;
+    border: 2px solid black; ; /* Red text on hover */
+    background: #b30000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 10px; 
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Left side section style */
+
+.left-side-section {
+    float: left;
+    width: 65%;
+    height: 100%;
+}
+
+
+/* Article style */
+
+article {
+    background-color: #b30000;
+    border: 2px solid black;
+    background: #b30000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 10px; 
+    position: relative;
+    box-shadow: 5px 0 5px -5px #333;
+    overflow-y: auto;
+
+}
+
+.left-side-articles {
+    float: left;
+    width: 65%;
+    height: 100%;  
+}
+
+
+/* Aside style */
+
+aside {
+    background-color: #b30000;
+    border: 2px solid black;
+    background: #b30000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 10px; 
+    width: 25%;
+    height: 100%;
+    position: relative; /* Changed from float: right to position: relative */
+    overflow-y: auto;
+    box-shadow: 5px 0 5px -5px #333;
+}
+
+
+aside.right-side img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: 100%; /* Ensure the image fits within the container height */
+    display: block; /* Ensure the image is a block element */
+    margin: 10px auto; /* Center the image horizontally */
+    object-fit: contain; /* Ensure the image covers the entire container */
+    
+}
+
+
+/* Footer style */
+footer {
+    
+    background-color: #005ab3;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    width: 100%; /* Ensure it spans the full width of the page */
+    position: relative;
+    top: 10px; /* Position it at the top */
+    width: calc(100% - 44px);
+    margin: 10px 10px; 
+    border: 2px solid black;  /* Red text on hover */
+    height: 50px; /* Adjust height as needed */
+    border-radius: 10px;
+    height: 70px; /* Adjust height as needed */
+    bottom: 0;
+}
+
+
+
+
+
+
+.grechen-fuemen-regular {
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sigmar-regular {
+    font-family: "Sigmar", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+.playwrite-it-moderna-100 {
+        font-family: "Playwrite IT Moderna", serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+}
+
+
+
+
+
+/* Logo style */
+.logo {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensures it stays on top */
+}
