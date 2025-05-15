@@ -219,3 +219,16 @@ input:focus, textarea:focus {
 
 
 
+
+
+
+
+/* Logo style */
+.logo {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensures it stays on top */
+}
