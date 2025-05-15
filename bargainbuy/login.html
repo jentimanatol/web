@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login | Bargain & Buy</title>
-  <link rel="stylesheet" href="stylesheets/login.css">
-  <script src="scripts/login.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function showQuery(event) {
+      event.preventDefault(); // Prevent form from submitting
+      const email = document.forms["loginForm"]["username"].value;
+      const password = document.forms["loginForm"]["psw"].value;
+      const query = `SELECT * FROM Users WHERE email = '${email}' AND password = '${password}'`;
+      alert("Query used:\n" + query + "\n\nPassword entered:\n" + password);
+    }
+  </script>
 </head>
-
 <body>
+
   <header class="site-header">
     <div class="logo-title">
-      <img src="images/bhcc_logo.png" alt="Logo" class="logo">
+      <img src="images/bhcc_logo.png" alt="Logo" class="logo" />
       <h1>Bargain & Buy</h1>
     </div>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
-      <a href="login.html" class="active">Login</a>
+      <a href="login.html">Login</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -30,15 +37,15 @@
 
     <div class="container">
       <label for="username">Email</label>
-      <input type="text" placeholder="Enter Email" name="username" required>
+      <input type="text" placeholder="Enter Email" name="username" required />
 
       <label for="psw">Password</label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="psw" required />
 
       <button type="submit">Login</button>
 
       <div class="checkbox-label">
-        <input type="checkbox" checked="checked" name="remember">
+        <input type="checkbox" checked="checked" name="remember" />
         <label for="remember">Remember me</label>
       </div>
     </div>
@@ -48,6 +55,6 @@
       <div class="psw">Forgot <a href="#">password?</a></div>
     </div>
   </form>
-</body>
 
+</body>
 </html>
