@@ -194,133 +194,85 @@ label {
 
 
 
-
-
-
-
-
-
-
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Body Styling */
-body {
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 0;
-}
-
-/* Header and Navigation */
-.site-header {
-  background-color: #003366;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 50px;
-  margin-right: 15px;
-}
-
-.site-header h1 {
-  font-size: 1.8em;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: #ffcc00;
-}
-
-/* Main Menu */
+/* Menu Page Layout */
 main.menu {
-  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-main h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+main.menu h2 {
+  font-size: 28px;
   text-align: center;
-  color: #003366;
+  color: #009688;
+  margin-bottom: 30px;
 }
 
-/* Group Containers */
 .group-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .group {
-  background-color: white;
+  flex: 1 1 300px;
+  background-color: #ffffff;
   border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  min-height: 300px;
 }
 
 .group h3 {
+  font-size: 20px;
+  color: #009688;
   margin-bottom: 15px;
-  font-size: 1.4em;
-  color: #003366;
-  border-bottom: 2px solid #003366;
+  border-bottom: 2px solid #009688;
   padding-bottom: 5px;
 }
 
-/* Buttons */
 .option {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .option button {
+  background-color: #009688;
+  color: white;
+  padding: 10px 15px;
   width: 100%;
-  padding: 12px;
-  font-size: 1em;
   border: none;
   border-radius: 6px;
-  background-color: #0055a5;
-  color: white;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .option button:hover {
-  background-color: #0077cc;
+  background-color: #00796b;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .navbar {
-    display: flex;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .group-container {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
 
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .group {
+    width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
