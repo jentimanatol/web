@@ -1,174 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login | Bargain & Buy</title>
-
-
-
-      <header class="site-header">
-        <div class="logo-title">
-            <!-- <img src="images/bargain_logo.png" alt="Bargain & Buy Logo" class="logo"> -->
-              <img src="images/bhcc_logo.png" alt="Logo" class="logo">
-            <h1>Bargain & Buy</h1>
-        </div>
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-
-
-
-
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    form {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-      width: 100%;
-      max-width: 400px;
-      padding: 30px;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .imgcontainer h1 {
-      margin-bottom: 10px;
-      font-size: 26px;
-      color: #009688;
-    }
-
-    input[type=text],
-    input[type=password] {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0 20px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      transition: border 0.3s;
-    }
-
-    input[type=text]:focus,
-    input[type=password]:focus {
-      border-color: #009688;
-      outline: none;
-    }
-
-    button {
-      background-color: #009688;
-      color: white;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #00796b;
-    }
-
-    .cancelbtn {
-      background-color: #f44336;
-      margin-top: 10px;
-    }
-
-    .cancelbtn:hover {
-      background-color: #d32f2f;
-    }
-
-    .container {
-      padding: 10px 0;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .checkbox-label {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .checkbox-label input {
-      margin-right: 10px;
-    }
-
-    .psw {
-      text-align: right;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .psw a {
-      color: #009688;
-      text-decoration: none;
-    }
-
-    .psw a:hover {
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 480px) {
-      form {
-        padding: 20px;
-      }
-    }
-  </style>
-
-
-
-
-
-  <script>
-
-
-
-
-
-    function showQuery(event) {
-      event.preventDefault(); // Prevent form from submitting
-      const email = document.forms["loginForm"]["username"].value;
-      const password = document.forms["loginForm"]["psw"].value;
-      const query = `SELECT * FROM Users WHERE email = '${email}' AND password = '${password}'`;
-      alert("Query used:\n" + query + "\n\nPassword entered:\n" + password);
-    }
-  </script>
+  <link rel="stylesheet" href="stylesheets/login.css">
+  <script src="scripts/login.js" defer></script>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="logo-title">
+      <img src="images/bhcc_logo.png" alt="Logo" class="logo">
+      <h1>Bargain & Buy</h1>
+    </div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="login.html" class="active">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <form name="loginForm" onsubmit="showQuery(event)">
     <div class="imgcontainer">
@@ -195,6 +48,6 @@
       <div class="psw">Forgot <a href="#">password?</a></div>
     </div>
   </form>
-
 </body>
+
 </html>
