@@ -36,7 +36,7 @@
 
   <script>
     async function getTemp() {
-      const response = await fetch("/.netlify/bhccgarden/functions/getTemperature");
+      const response = await fetch("/.netlify/functions/getTemperature");
       const data = await response.json();
       document.getElementById("temperature").innerText = data.temp + " °F";
     }
