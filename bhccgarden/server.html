@@ -20,6 +20,8 @@
         <nav class="navbar">
             
             <a href="index.html">Home</a>
+              <a href="js.html">js code public for future development</a>
+
 
 
             
@@ -31,13 +33,53 @@
 
 
   
-    <h2> lunch server </h2>
-    <p> netlify link </p>
-    <p> netlify deploy --prod</p>
+    <h2> const fetch = require('node-fetch');
 
- <img src="images/Screenshot1.jpg" alt="server">
-  
+const CLIENT_ID = "";
+const CLIENT_SECRET = "";
+const THING_ID = "";
+const PROPERTY_ID = "";
 
+exports.handler = async function(event, context) {
+  try {
+    // Step 1: Get token
+    const authRes = await fetch("https://api2.arduino.cc/iot/v1/clients/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "client_credentials",
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        audience: "https://api2.arduino.cc/iot"
+      })
+    });
+    const authData = await authRes.json();
+    const token = authData.access_token;
+
+    // Step 2: Get variable
+    const dataRes = await fetch(`https://api2.arduino.cc/iot/v2/things/${THING_ID}/properties/${PROPERTY_ID}/lastvalue`, {
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      }
+    });
+
+    const data = await dataRes.json();
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ temp: data.value })
+    };
+
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message })
+    };
+  }
+};
+</h2>
+
+   
 
 
 
