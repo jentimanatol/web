@@ -154,7 +154,7 @@ input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     background: #111;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px solid #444;
     border-radius: 8px;
 }
@@ -238,12 +238,12 @@ input:focus, textarea:focus {
 
  body {
       font-family: Arial, sans-serif;
-      background: #eef;
+      background: rgb(183, 183, 211);
       text-align: center;
       padding: 50px;
     }
     .card {
-      background: white;
+      background: rgb(99, 54, 54);
       border-radius: 15px;
       padding: 30px;
       display: inline-block;
@@ -257,7 +257,7 @@ input:focus, textarea:focus {
     .debug {
       margin-top: 20px;
       font-family: monospace;
-      background: #ddd;
+      background: #1d1010;
       padding: 10px;
       max-width: 400px;
       margin-left: auto;
