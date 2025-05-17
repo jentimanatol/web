@@ -1,85 +1,44 @@
-// 🌡️ Netlify Function: getTemperature.js
+const fetch = require('node-fetch');
 
-const fetch = require("node-fetch");
-
-const API_ENDPOINT = "https://api2.arduino.cc/iot/v2/things/34b9162c-4d03-40f9-8c76-1727a2f80aba/properties";
-const BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwaTIuYXJkdWluby5jYy9pb3QiLCJhenAiOiJ6azdMVWFIWE9GcFRtWTh0T1ZvYmdXOWZQVWRUUTg1YyIsImV4cCI6MTc0NzQ1NjMwMiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIiwiaHR0cDovL2FyZHVpbm8uY2MvY2xpZW50X2lkIjoiYmhjY2dhcmRlbiIsImh0dHA6Ly9hcmR1aW5vLmNjL2lkIjoiYjdmZDcyOTItOWRiYi00YWNlLTllNTktNzRmNGQ1N2NmZjFiIiwiaHR0cDovL2FyZHVpbm8uY2MvcmF0ZWxpbWl0IjoxMCwiaHR0cDovL2FyZHVpbm8uY2MvdXNlcm5hbWUiOiJhbmF0b2xhcmR1aW5vIiwiaWF0IjoxNzQ3NDU2MDAyLCJzdWIiOiJ6azdMVWFIWE9GcFRtWTh0T1ZvYmdXOWZQVWRUUTg1Y0BjbGllbnRzIn0.eEmWu-xPYk9NemmEeMNEOn2_mss2PJI15mhMtXn9YVo"; 
-
-
-
-
-
-
+const CLIENT_ID = "eE1fxEycwg8e693BlhzXhTzudtfRo5zS";
+const CLIENT_SECRET = "MUeehKBcXYQGbi1t197yQJUWNpwSoNl1IdP5wgtdMcEs2TjdIn2AnKh8K05IiKGA";
+const THING_ID = "a49ac818-fb0f-4320-9194-4d72d0a13765";
+const PROPERTY_ID = "9ee5a505-d461-480c-983b-a02449fe6ea8";
 
 exports.handler = async function(event, context) {
-  console.log("Temperature function invoked");
   try {
-    const response = await fetch(API_ENDPOINT, {
+    // Step 1: Get token
+    const authRes = await fetch("https://api2.arduino.cc/iot/v1/clients/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "client_credentials",
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        audience: "https://api2.arduino.cc/iot"
+      })
+    });
+    const authData = await authRes.json();
+    const token = authData.access_token;
+
+    // Step 2: Get variable
+    const dataRes = await fetch(`https://api2.arduino.cc/iot/v2/things/${THING_ID}/properties/${PROPERTY_ID}/lastvalue`, {
       headers: {
-        "Authorization": `Bearer ${BEARER_TOKEN}`,
+        "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json"
       }
     });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log("API response received:", data.length, "properties");
-
-    // Find the sensor properties
-    const temperatureObj = data.find(p => p.name === "dHT11tsensor");
-    const humidityObj = data.find(p => p.name === "dHT11hsenso");
-    const soilMoistureObj = data.find(p => p.name === "capaitiveSoilMoistureSensor");
-    const waterValveStatus = data.find(p => p.name === "water_valve") || { last_value: false };
-
-    if (!temperatureObj) {
-      console.warn("Temperature sensor data not found in API response");
-      return {
-        statusCode: 404,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        },
-        body: JSON.stringify({
-          error: "Temperature sensor data not found",
-          timestamp: new Date().toISOString()
-        })
-      };
-    }
-
-    console.log("Temperature value:", temperatureObj.last_value);
-
-    // Return successful response with all available sensor data
+    const data = await dataRes.json();
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      body: JSON.stringify({
-        temperature: temperatureObj.last_value,
-        humidity: humidityObj ? humidityObj.last_value : null,
-        soilMoisture: soilMoistureObj ? soilMoistureObj.last_value : null,
-        waterValve: waterValveStatus.last_value,
-        timestamp: new Date().toISOString(),
-        location: "Everett, MA",
-        device: "Arduino UNO R4 WiFi"
-      })
+      body: JSON.stringify({ temp: data.value })
     };
-  } catch (err) {
-    console.error("Temperature function error:", err);
+
+  } catch (error) {
     return {
       statusCode: 500,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      body: JSON.stringify({
-        error: err.message,
-        timestamp: new Date().toISOString()
-      })
+      body: JSON.stringify({ error: error.message })
     };
   }
 };
